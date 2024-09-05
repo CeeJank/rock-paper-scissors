@@ -23,37 +23,37 @@ function playRound(humanChoice, computerChoice){
     console.log(computerChoice);
     if (humanChoice == "rock" && computerChoice == "paper"){
         computerScore = computerScore+1;
-        let result = "you lose";
+        let result = "You lose! Paper beats Rock!";
         console.log(result);
     } 
 
     if (humanChoice == "paper" && computerChoice == "scissors"){
         computerScore = computerScore+1;
-        let result = "you lose";
+        let result = "You lose! Scissors beats Paper!";
         console.log(result);
     }
 
     if (humanChoice == "scissors" && computerChoice == "rock"){
         computerScore = computerScore+1;
-        let result = "you lose";
+        let result = "You lose! Rock beats Scissors!";
         console.log(result);
     }
 
     if (humanChoice == "scissors" && computerChoice == "paper"){
-        computerScore = computerScore+1;
-        let result = "you win";
+        humanScore = humanScore+1;
+        let result = "You win! Scissors beats paper!";
         console.log(result);
     }
 
     if (humanChoice == "paper" && computerChoice == "rock"){
-        computerScore = computerScore+1;
-        let result = "you win";
+        humanScore = humanScore+1;
+        let result = "You win! Paper beats rock!";
         console.log(result);
     }
 
     if (humanChoice == "rock" && computerChoice == "scissors"){
-        computerScore = computerScore+1;
-        let result = "you win";
+        humanScore = humanScore+1;
+        let result = "You win! Paper beats rock!";
         console.log(result);
     }
 
@@ -63,6 +63,8 @@ function playRound(humanChoice, computerChoice){
 }
 
 playRound(humanSelection, computerSelection);
+console.log(humanScore, computerScore);
+
 
 
 
