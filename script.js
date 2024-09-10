@@ -5,6 +5,7 @@ const choices = ["rock", "paper", "scissors"]
 let humanScore = 0;
 let computerScore = 0;
 
+//Assign variables for functions
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
 
@@ -12,16 +13,15 @@ const humanSelection = getHumanChoice();
 function getComputerChoice() {
     const computerChoice = choices[Math.floor(Math.random(choices) * choices.length)]
     console.log(computerChoice);
-    return computerChoice;
 }
 
-function getHumanChoiceChoice() {
-    return;
+function getHumanChoice() {
+    const humanChoice = prompt("Choose Rock, Paper, or Scissors");
+    return humanChoice;
 }
 
 function playRound(humanChoice, computerChoice) {
-    return;
+    
 }
 
 
-getComputerChoice();
