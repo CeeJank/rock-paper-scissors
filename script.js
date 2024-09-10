@@ -12,7 +12,7 @@ const humanSelection = getHumanChoice();
 
 function getComputerChoice() {
     const computerChoice = choices[Math.floor(Math.random(choices) * choices.length)]
-    return computerChoice;
+    console.log(computerChoice);
 }
 
 function getHumanChoice() {
