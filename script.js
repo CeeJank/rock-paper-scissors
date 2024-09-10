@@ -5,11 +5,6 @@ const choices = ["rock", "paper", "scissors"]
 let humanScore = 0;
 let computerScore = 0;
 
-//Assign variables for functions
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
-
-
 function getComputerChoice() {
     const computerChoice = choices[Math.floor(Math.random(choices) * choices.length)]
     return computerChoice;
@@ -39,11 +34,20 @@ function playRound(humanChoice, computerChoice) {
             break;
 
         default: 
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}!`)
-        
-    }
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+            break;
+    }       
 }
 
-playRound(humanSelection, computerSelection);
+function playGame() { 
+    const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
+    playRound(humanSelection, computerSelection);
+}
 
+
+const howManyRounds = prompt("how many rounds?");
+for (i = 0; i < howManyRounds; i++) {
+    playGame();
+}
 
