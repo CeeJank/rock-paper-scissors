@@ -1,0 +1,39 @@
+body {
+    background-color: #dbdcda;
+}
+
+
+.console {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.btn {
+   width: 18em;
+   height: 18em;
+}
+
+#rock {
+    background: url(rock.jpg);
+}
+
+#paper {
+    background: url(paper.jpg);
+}
+
+#scissors {
+    background: url(scissors.jpg);
+}
+
+
+footer { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a69080;
+    height: 5em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}

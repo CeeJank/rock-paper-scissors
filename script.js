@@ -59,3 +59,14 @@ for (i = 0; i < howManyRounds; i++) {
 console.log("Game Over");
 
 
+const heading = document.querySelector("#heading");
+
+const newChild = document.createElement("div");
+newChild.classList.add("newChild");
+newChild.textContent = "bruh moment";
+
+heading.appendChild(newChild);
+
+
+
+
