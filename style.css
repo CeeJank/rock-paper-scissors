@@ -2,6 +2,10 @@ body {
     background-color: #dbdcda;
 }
 
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -9,9 +13,25 @@ body {
 }
 
 .console {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin: auto;
+}
 
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20%;
+}
+
+.submit {
+    
+    width: 20em;
+    height: 5em;
+    border-radius: 10px;
+    background-color: #FFEE8C;
 }
 
 .btn {
@@ -33,7 +53,7 @@ body {
 
 
 .footer { 
-    position: fixed;
+    position: relative;
     bottom: 0;
     display: flex;
     width: 100%;
