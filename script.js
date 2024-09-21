@@ -5,6 +5,11 @@ const choices = ["rock", "paper", "scissors"]
 let humanScore = 0;
 let computerScore = 0;
 
+const buttons = document.querySelectorAll("button")
+buttons.forEach(button => {
+    button.addEventListener('click', getHumanChoice);
+});
+
 //fetching choice from random
 function getComputerChoice() {
     const computerChoice = choices[Math.floor(Math.random(choices) * choices.length)]
@@ -12,7 +17,9 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    const humanChoice = prompt("Choose Rock, Paper, or Scissors");
+    //const humanChoice = prompt("Choose Rock, Paper, or Scissors");
+    console.log($(this).val());
+    let humanChoice = $(this).val();
     return humanChoice;
 }
 
@@ -66,6 +73,7 @@ newChild.classList.add("newChild");
 newChild.textContent = "bruh moment";
 
 heading.appendChild(newChild);
+
 
 
 
