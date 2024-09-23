@@ -1,28 +1,30 @@
-//Assiging array of rps
-const choices = ["rock", "paper", "scissors"]
-
 //Assign score variable
 let humanScore = 0;
 let computerScore = 0;
 
-const buttons = document.querySelectorAll("button")
+//selects all the buttons
+const buttons = document.querySelectorAll(".btn")
 buttons.forEach(button => {
     button.addEventListener('click', getHumanChoice);
 });
 
 //fetching choice from random
 function getComputerChoice() {
-    const computerChoice = choices[Math.floor(Math.random(choices) * choices.length)]
-    return computerChoice;
+    const computerSelection = choices[Math.floor(Math.random(choices) * choices.length)]
+    return computerSelection;
 }
 
+//retrieving the human choice from the buttons and playing 
 function getHumanChoice() {
     //const humanChoice = prompt("Choose Rock, Paper, or Scissors");
-    console.log($(this).val());
-    let humanChoice = $(this).val();
-    return humanChoice;
+    console.log("You have chosen" + this.value);
+    let humanSelection = this.value;
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
 }
 
+//the game itself
 function playRound(humanChoice, computerChoice) {
     switch (true) {
         case (humanChoice == "rock" && computerChoice == "scissors"):
@@ -51,28 +53,9 @@ function playRound(humanChoice, computerChoice) {
     }       
 }
 
-function playGame() { //assgning the selections inside function to execute code everytime playGame()
-    const computerSelection = getComputerChoice();
-    const humanSelection = getHumanChoice();
-    playRound(humanSelection, computerSelection);
-}
-
-const howManyRounds = prompt("how many rounds?");
-
-for (i = 0; i < howManyRounds; i++) {
-    playGame();
-}
-
-console.log("Game Over");
 
 
-const heading = document.querySelector("#heading");
 
-const newChild = document.createElement("div");
-newChild.classList.add("newChild");
-newChild.textContent = "bruh moment";
-
-heading.appendChild(newChild);
 
 
 
