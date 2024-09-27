@@ -23,6 +23,7 @@ const form = document.querySelector("#form")
 //setting up the input of rounds
 submitbtn.addEventListener("click", function (event){ //clicking submit button to log the rounds
     event.preventDefault();
+    submitbtn.classList.add("hide");
     console.log("you want to play " + howManyRounds.value + " rounds");
     let numRounds = howManyRounds.value;
     roundsToPlay(parseInt(numRounds));
@@ -70,10 +71,19 @@ function playGame(playerChoice){
     playRound(playerChoice, computerChoice);
     if (rounds === roundsPlayed){
         console.log("game over!");
+        if (humanScore > computerScore){
+            console.log("human wins")
+        } else if(humanScore === computerScore){
+            console.log("No one wins!")
+        } else {
+            console.log("computer wins!")
+        }
         rounds = 0;
         roundsPlayed = 0;
         humanScore = 0;
         computerScore = 0;
+        submitbtn.classList.remove("hide");
+
     }
     
 
